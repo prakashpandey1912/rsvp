@@ -26,8 +26,7 @@
         <!-- <iframe width="560" height="315" src="?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     </div>
     <script>
-        window.onload = function() {
-            const params = new Proxy(new URLSearchParams(window.location.search), {
+        const params = new Proxy(new URLSearchParams(window.location.search), {
                     get: (searchParams, prop) => searchParams.get(prop),
         });
         // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
@@ -36,6 +35,7 @@
         const h1 = document.createElement('h2')
         h1.innerHTML = `Hello `+value+`,<br/>BIAL cordially invites you to the launch of the brand new T2 at Kempegowda International Airport`
         document.body.append(h1)
+        window.onload = function() { 
             setTimeout(()=>{
                 document.getElementById('start').style.display = "block";
                 document.getElementById('start').classList.add("fadein");
