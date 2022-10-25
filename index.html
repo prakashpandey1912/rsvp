@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <script src="./Tween.js">
+    </script>
     <!-- <h2>Prakash Pandey</h2> -->
     <div id="start">
         <!-- <div id="full_screen">Full Screen</div> -->
@@ -35,7 +37,26 @@
         const h1 = document.createElement('h2')
         h1.innerHTML = `Hello `+value+`,<br/>BIAL cordially invites you to the launch of the brand new T2 at Kempegowda International Airport`
         document.body.append(h1)
-        window.onload = function() { 
+        window.onload = function() {
+            // Setup the animation loop.
+            function animate(time) {
+                requestAnimationFrame(animate);
+                TWEEN.update(time);
+            }
+            requestAnimationFrame(animate);
+
+            var coords = { x: 0, y: 0 }; // Start at (0, 0)
+            var tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
+                .to({ x: 0, y: -1000 }, 10000) // Move to (300, 200) in 1 second.
+            .easing(TWEEN.Easing.Quadratic.Out) // Use an easing function to make the animation smooth.
+                .onUpdate(function() { // Called after tween.js updates 'coords'.
+                    h1.style.setProperty('transform', 'translate(' + coords.x + 'px, ' + coords.y + 'px)');
+                })
+                .start(2000); // Start the tween immediately.
+            setTimeout(()=>{
+                document.getElementById('video').style.display = "block";
+                document.getElementById('video').classList.add("fadein");
+            },1500)
             setTimeout(()=>{
                 document.getElementById('start').style.display = "block";
                 document.getElementById('start').classList.add("fadein");
