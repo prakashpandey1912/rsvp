@@ -106,21 +106,17 @@ html {
       top: 5px!important;
       height:80vh!important;
     }
-    @supports (-webkit-touch-callout: none) {
-      #video{
-        height:90vh!important;
-      }
-    }
-    /* @supports not (-webkit-touch-callout: none) {
-      #video{
-        /* height:90vh!important; */
-      /* } */
-     /* }  */ */
     #start{
       transform:rotate(0deg)!important;
       left: 25vw!important;
       bottom: 10vh!important;
     }
+    @supports (-webkit-touch-callout: none) {
+      #video{
+        height:90vh!important;
+      }
+    }
+
   }
   @keyframes fade-in {
     from {
