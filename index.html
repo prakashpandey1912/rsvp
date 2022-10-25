@@ -13,7 +13,7 @@
     <h2>Prakash Pandey</h2>
     <div id="start">
         <!-- <div id="full_screen">Full Screen</div> -->
-        <div id="rsvp" onclick="location.href = 'https://www.instagram.com/'">RSVP</div>
+        <div id="rsvp" onclick="location.href = 'https://www.mantisshrimpcreative.com/'">RSVP</div>
     </div>
     <div id="blackscreen">
     </div>
@@ -23,6 +23,14 @@
     <div class="video-wrapper">
         <!-- <iframe width="560" height="315" src="?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     </div>
+    <script>
+        window.onload = function() {
+            setTimeout(()=>{
+                document.getElementById('start').style.display = "block";
+                document.getElementById('start').classList.add("fadein");
+            },5000)
+        }
+    </script>
 </body>
 
 </html>

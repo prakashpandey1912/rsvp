@@ -8,6 +8,7 @@ html {
   body {
     height: 100%;
     margin: 0;
+    overflow-y: hidden;
   }
   .video-wrapper {
     width:100%;
@@ -28,8 +29,11 @@ html {
     left: 25vw;
     text-align: center;
     color: rgb(0 , 122, 255);
-    display: block;
+    display: none;
     justify-content: center;
+  }
+  .fadein{
+    animation: fade-in 1s;
   }
   #full_screen {
     float: left;
@@ -102,3 +106,13 @@ html {
       bottom: 5vh!important;
     }
   }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
