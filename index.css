@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
     /* height: 100%; */
     height:100vh;
-
+    background-color: black;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -30,8 +30,8 @@ html {
     width: 50vw;
     height: 10vw;
     position: fixed;
-    bottom: 5vh;
-    left: 25vw;
+    bottom: 10vh;
+    left: 20vw;
     text-align: center;
     color: rgb(0 , 122, 255);
     display: none;
@@ -42,19 +42,22 @@ html {
   }
   #full_screen {
     float: left;
-    border: 0.2em solid white;
-    background-color: white;
-    border-radius: 100px;
+    /* border: 0.2em solid white; */
+    /* background-color: white; */
+    /* border-radius: 100px; */
     width: 40%;
     margin: 5px;
   }
   #rsvp{
     float: left;
-    border: 0.2em solid white;
-    background-color: white;
-    border-radius: 100px;
+    /* border: 0.2em solid white; */
+    /* background-color: white; */
+    /* border-radius: 100px; */
     width: 100%;
     margin: 5px;
+  }
+  img{
+    width: 50vw;
   }
   #video{
     z-index: 998;
@@ -66,16 +69,17 @@ html {
   }
   h2 {
     z-index: 999;
-    width: 50vw;
+    width: 99vw;
     height: auto;
     position: fixed;
     top: 5vh;
-    left: 25vw;
+    /* left: 25vw; */
     text-align: center;
     border-radius: 100px;
     font-size: 1.3em;
     color: white;
     font-family: monospace;
+    padding: 0px 12px
   }
   #blackscreen{
     z-index:997;
@@ -108,15 +112,18 @@ html {
     }
     #start{
       transform:rotate(0deg)!important;
-      left: 25vw!important;
+      left: 40vw!important;
       bottom: 10vh!important;
+      width: 24vw!important;
+    }
+    img{
+      width: 20vw;
     }
     @supports (-webkit-touch-callout: none) {
       #video{
         height:90vh!important;
       }
     }
-
   }
   @keyframes fade-in {
     from {

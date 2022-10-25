@@ -10,10 +10,12 @@
 </head>
 
 <body>
-    <h2>Prakash Pandey</h2>
+    <!-- <h2>Prakash Pandey</h2> -->
     <div id="start">
         <!-- <div id="full_screen">Full Screen</div> -->
-        <div id="rsvp" onclick="location.href = 'https://www.mantisshrimpcreative.com/'">RSVP</div>
+        <div id="rsvp" onclick="location.href = 'https://www.mantisshrimpcreative.com/'">
+            <img src="./RSVP.png" alt="photo" />
+        </div>
     </div>
     <div id="blackscreen">
     </div>
@@ -25,6 +27,15 @@
     </div>
     <script>
         window.onload = function() {
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                    get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+        const value = params.name // "some_value"
+        console.log(value)
+        const h1 = document.createElement('h2')
+        h1.innerHTML = `Hello `+value+`,<br/>BIAL cordially invites you to the launch of the brand new T2 at Kempegowda International Airport`
+        document.body.append(h1)
             setTimeout(()=>{
                 document.getElementById('start').style.display = "block";
                 document.getElementById('start').classList.add("fadein");
