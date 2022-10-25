@@ -37,9 +37,7 @@
         const h1 = document.createElement('h2')
         h1.innerHTML = `Hello `+value+`,<br/>BIAL cordially invites you to the launch of the brand new T2 at Kempegowda International Airport`
         document.body.append(h1)
-        window.onload = function() {
-            // Setup the animation loop.
-            function animate(time) {
+        function animate(time) {
                 requestAnimationFrame(animate);
                 TWEEN.update(time);
             }
@@ -57,6 +55,8 @@
                 document.getElementById('video').style.display = "block";
                 document.getElementById('video').classList.add("fadein");
             },3500)
+        window.onload = function() {
+            // Setup the animation loop.
             setTimeout(()=>{
                 document.getElementById('start').style.display = "block";
                 document.getElementById('start').classList.add("fadein");
