@@ -80,7 +80,7 @@ html {
     top:0px;
     left: 0px;
     height: 100%;
-    width: 100%;
+    width: 150%;
   }
   @media screen and (orientation:portrait){
     #video{
@@ -97,9 +97,10 @@ html {
   @media screen and (orientation:landscape) {
      #video{
       transform:rotate(0deg)!important;
-      width: 95%!important;
+      width: 100%!important;
       left: 20px!important;
-      height:100vh!important;
+      top: 5px!important;
+      height:80vh!important;
     }
     #start{
       transform:rotate(0deg)!important;
