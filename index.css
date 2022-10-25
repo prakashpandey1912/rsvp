@@ -114,8 +114,8 @@ html {
     /* @supports not (-webkit-touch-callout: none) {
       #video{
         /* height:90vh!important; */
-      }
-    } */
+      /* } */
+     /* }  */ */
     #start{
       transform:rotate(0deg)!important;
       left: 25vw!important;
