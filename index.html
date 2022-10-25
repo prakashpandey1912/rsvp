@@ -52,11 +52,11 @@
                 .onUpdate(function() { // Called after tween.js updates 'coords'.
                     h1.style.setProperty('transform', 'translate(' + coords.x + 'px, ' + coords.y + 'px)');
                 })
-                .start(2000); // Start the tween immediately.
+                .start(3500); // Start the tween immediately.
             setTimeout(()=>{
                 document.getElementById('video').style.display = "block";
                 document.getElementById('video').classList.add("fadein");
-            },1500)
+            },3500)
             setTimeout(()=>{
                 document.getElementById('start').style.display = "block";
                 document.getElementById('start').classList.add("fadein");
